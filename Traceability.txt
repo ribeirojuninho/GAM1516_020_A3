@@ -1,0 +1,27 @@
+Megaman X Game:
+
+1- Pickups implemented. X can pickup lifes and when pickup a life it will increment and show in HUD
+
+2- Player Pawn can be killed and will restart at the last checkpoint( there is 2).Player Pawn can move, jump, dash and shoot. If pawn fall, being hitted(shoot) by AI it will consider killed and the position will be set to the last checkpoint( I'm not destroy the pawn and respawning it, just changing the position to the checkpoint). Pawn can kill AI (the AI will be destroyed).
+
+3- HUD implemented. HUD is simple, shows a X-Life(image) and the quantity. You start with 1 life and can get more on the stage, it will be show when increment. It will not decrement when you get killed as the killed event is just reseting the pawn position to checkpoint.
+
+4- Collision detection implemented for Hits and Overlaps. Examples: player hits the AI, player hit the floor, player overlap a pickupitem.
+
+5- AI will no patrol, but will follow and shoot. AI rotate based on Pawn noise. If AI sees the player pawn it will start to follow (forever or until you kill it) and also can shoot(it will start to shoot when see the target) you (sometimes the rotate bugs it because the noise detection).
+
+6 - MovingPlatform implemented. A simple platform that can move up and down.
+
+7 - Player control(physics movement) implement. Can move left and right, jump, dash and shoot.
+
+8 - Spawning implement. I used spawns for projectiles(AI and Player Pawn spawns projectiles).
+
+9 - Custom components = BasicCharacter(CharacterAnimation inherit from it) and Projectile (AI and Character use it).
+
+10 - There are 2 checkpoints, one where the player start and the second at the red truck. The goal is try to get at the end, if you get there you going to be teleported.
+
+11- Technical game feature of my choice 1 = Animation. I implemented some animations for the character: walking, idle, jumping, shooting,walkingAndShooting and dashing. And one for the pickupitem.
+
+12- Technical game feature of my choice 2 = I'm using AudioComponent, SoundBase.
+
+There is 2 levels, one that you start and the second you access when you reach the goal. I also put background sound for both levels, the second I created a soundcue for it.

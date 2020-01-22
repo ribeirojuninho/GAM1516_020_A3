@@ -83,7 +83,7 @@ AFloor::AFloor()
     CheckpointBox->OnComponentBeginOverlap.AddDynamic(this, &AFloor::OnOverlapBegin);
     OverlapBox->OnComponentBeginOverlap.AddDynamic(this, &AFloor::OnOverlapBegin2);
     RightBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &AFloor::OnOverlapBegin3);
-    //RightBox->OnComponentEndOverlap.AddUniqueDynamic(this, &AFloor::OverlapEnds);
+    
 
     FloorBox->ComponentTags.Add("Floor");
     SecondFloorBox->ComponentTags.Add("SecondFloor");
