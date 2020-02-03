@@ -7,7 +7,7 @@
 
 AX_HUD::AX_HUD()
 {
-    static ConstructorHelpers::FClassFinder<UUserWidget> XHud(TEXT("'/Game/Blueprints/UI/Status'"));
+    static ConstructorHelpers::FClassFinder<UUserWidget> XHud(TEXT("/Game/Blueprints/UI/Status"));
     if (XHud.Succeeded())
     {
         StatusGuiClass = XHud.Class;
